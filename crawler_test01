@@ -1,1 +1,9 @@
 
+【现象】在爬取 实习僧 招聘网站时；对应的字体乱码  https://www.shixiseng.com/interns?keyword=python&page=1&city=%E5%85%A8%E5%9B%BD&type=intern
+    <a href="https://www.shixiseng.com/intern/inn_lfezezr0rzt5?pcm=pc_SearchList" title="&#xf2af&#xe185&#xe447&#xf45b&#xe491&#xf77b实习&#xedb9" target="_blank" class="title ellipsis font" data-v-98c756d6="">实习</a>
+
+######方法一#####硬钢法：把每个字体对应的字符拷贝出来
+  如：title="&#xf2af&#xe185&#xe447&#xf45b&#xe491&#xf77b实习&#xedb9"   title对应的本应该是"python实习生"  
+       &#xf2af&#xe185&#xe447&#xf45b&#xe491&#xf77b实习&#xedb9  看个数 p正好对应&#xf2af   y对应的是&#xe185  依次类推
+   
+  源码：
