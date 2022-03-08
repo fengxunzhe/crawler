@@ -13,3 +13,6 @@
 5、通过堆栈，定位到生成的位置
 -
  ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/4.png)
+6、定位到加密点
+-
+ ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/5.png)
