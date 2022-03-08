@@ -4,5 +4,8 @@
 -
  ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/1.png)
 
-3、单步进入write 函数，定位到cookie写入的位置，取消之前的断点，此处下断点
+3、单步进入write 函数，定位到cookie写入的位置，取消之前的断点，此处下断点，点击跳过函数,直到e = kg_mid 点击单步进入
 -
+ ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/2.png)
+4、单步进入到生成kg_mid的函数，查看堆栈，定位到上一步生成的位置如下：
+
