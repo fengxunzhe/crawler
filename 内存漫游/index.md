@@ -8,9 +8,5 @@
 ## 二、环境搭建
       1、npm install -g anyproxy express body-parser shelljs crypto cheerio @babel/core @babel/types @babel/generator   # -g代表安装在npm的全局
       
-      2、anyproxy ca # 同fiddler抓取https也要安装证书一样，anyproxy安装 在cmd下安装
-      
-      ![img](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/1.png)
-            
-
-
+      2、anyproxy ca # 同fiddler抓取https也要安装证书一样，anyproxy安装 在cmd下安装 
+![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/1.png)
