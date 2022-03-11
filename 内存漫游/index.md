@@ -15,3 +15,5 @@
          web interface started on port 8002 # web界面上能看到所有的请求信息ip:8002
          
       4、打开网页访问 127.0.0.1:8002,安装证书
+![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/2.png)
+      
