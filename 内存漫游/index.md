@@ -75,7 +75,22 @@
                   ②、拦截并修改服务端响应
                         包括http状态码(status code)、响应头(response header)、响应内容(response content)
                   ③、拦截修改https请求
-                        本质是中间人攻击、需要客户端提取信任CA证书         
+                        本质是中间人攻击、需要客户端提取信任CA证书    
+            2.2、rule文件
+            
+                  module.exports = {  // 我们自己写模块的时候，需要在模块最后写好模块接口，声明这个模块对外暴露什么内容，module.exports 提供了暴露接口的方法
+                      summary: 'test rule module for AnyProxy', // 模块介绍
+
+                      *beforeSendRequest(requestDetail){},   // 自定义方法  发送请求前拦截处理
+
+                      *beforeSendResponse(requestDetail, responseDetail){},  // 自定义方法  发送响应前拦截处理
+
+                      *beforeDealHttpsRequest(){},  // 自定义方法  是否处理https请求
+
+                      *onError(requestDetail, error){},  // 自定义方法  处理请求出错的事件
+
+                      *onConnectError(requestDetail, error){}   //// 自定义方法  处理HTTPS连接服务器出错
+                  }
 
       3、
       
