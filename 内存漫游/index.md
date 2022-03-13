@@ -20,9 +20,9 @@
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/4.png)
 
 ## 三、原理
-      1、访问目标网站时，经过我们的自定义代理服务器anyproxy，截获流量(通过127.0.0.1:8002可打开anyproxy查看)
+      ===1、访问目标网站时，经过我们的自定义代理服务器anyproxy，截获流量(通过127.0.0.1:8002可打开anyproxy查看)
       
-            1.1、自定义AnyProxy，实现拦截流量
+           1.1、自定义AnyProxy，实现拦截流量
                   const AnyProxy = require('anyproxy')
                   const option = {
                       port: 8001, // 非网页端拦截的端口
@@ -53,19 +53,23 @@
 
                   // proxyServer.close()
                   
-             1.2、全局代理 和  非全局代理
+            1.2、全局代理 和  非全局代理
              
                   开启全局代理后，关掉需要在以下中关掉
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/5.png)
                   
                   局部代理，使用谷歌SwitchyOmega
             
-             1.3、使用演示
+            1.3、使用演示
                   开启全局代理后：webPort: 8002  //网页端拦截的端口 
                   打开网页访问127.0.0.1:8002，即可查看到经过的数据流量
-![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/6.png)                  
+![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/6.png)     
+
                   开启谷歌局部代理
       
-      2、对于流量中的JS 和 HTML代码，使用AST处理，注入HOOK逻辑
+      ===2、对于流量中的JS 和 HTML代码，使用AST处理，注入HOOK逻辑
+      
+            2.1、 规则过滤 rule: require('myRuleModule'),  // 拦截的规则
+            
 
       3、
