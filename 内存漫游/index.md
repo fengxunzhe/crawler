@@ -59,13 +59,15 @@
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/5.png)
                   
                   局部代理，使用谷歌SwitchyOmega
+![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/7.png) 
             
             1.3、使用演示
                   开启全局代理后：webPort: 8002  //网页端拦截的端口 
                   打开网页访问127.0.0.1:8002，即可查看到经过的数据流量
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/6.png)     
 
-                  开启谷歌局部代理
+                  开启谷歌局部代理: 流量走我们的anyproxy代理服务器
+![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/8.png) 
       
       ===2、对于流量中的JS 和 HTML代码，使用AST处理，注入HOOK逻辑
       
