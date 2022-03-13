@@ -91,6 +91,21 @@
 
                       *onConnectError(requestDetail, error){}   //// 自定义方法  处理HTTPS连接服务器出错
                   }
+                  
+                  单个案例：
+                    *beforeSendResponse(requestDetail, responseDetail){
+                    console.log("-------------",requestDetail.url)
+                    if(requestDetail.url.indexOf("bbs")>=0){     //  判断请求的链接是否有baidu关键字
+                        const newResponse = responseDetail.response;  //取出返回结果
+                        newResponse.body = '----------------Test--------------';  // 更改返回结果为==========Test===========
+                        return {
+                            response: newResponse
+                        }  // 返回response，此处返回的必须是一对键值
+                    }
+                    return {  //判断请求的链接是否有baidu关键字,没有的话放行
+                        response: responseDetail.response
+                    }
+                },
 
       3、
       
