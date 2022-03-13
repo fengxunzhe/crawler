@@ -21,6 +21,7 @@
 
 ## 三、原理
       1、访问目标网站时，经过我们的自定义代理服务器anyproxy，截获流量
+      
             1.1、自定义AnyProxy，实现拦截流量
                   const AnyProxy = require('anyproxy')
                   const option = {
@@ -51,6 +52,10 @@
                   proxyServer.start() // 代理开启
 
                   // proxyServer.close()
+                  
+             1.2、全局代理 和  非全局代理
+             
+                  开启全局代理后，关掉需要在
 
       
       2、对于流量中的JS 和 HTML代码，使用AST处理，注入HOOK逻辑
