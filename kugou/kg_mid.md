@@ -11,7 +11,17 @@
 
 ③、单步进入，进入函数内部，一步步执行
  ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/66.png)
- 
+## 3、刷新界面断在了第2步，我们单步进入函数内部，发现断在了第一个函数内
+
+![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/77.png)
+
+该函数不是我们需要的，我们点击 跳过该函数，直接到函数底部，然后又断在了我们第一次下断点的地方
+![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/88.png)
+
+再次单步进入，此次进入到write的内部，是cookie生成的地方，但是看右边此时js生成的参数是kg_mid_temp，并不是我们需要的
+![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/9.png)
+
+所以此时，我们在此处下断点，因为此处是cookie生成的地方, 然后点击 跳过该JS函数，继续执行JS，然后发现kg_mid生成了
 
 ## 3、单步进入write 函数，定位到cookie写入的位置，取消之前的断点，此处下断点，点击跳过函数,直到e = kg_mid 点击单步进入
 
