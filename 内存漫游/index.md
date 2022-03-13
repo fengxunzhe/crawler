@@ -21,6 +21,37 @@
 
 ## 三、原理
       1、访问目标网站时，经过我们的自定义代理服务器anyproxy，截获流量
+            1.1、自定义AnyProxy，实现拦截流量
+                  const AnyProxy = require('anyproxy')
+                  const option = {
+                      port: 8001, // 非网页端拦截的端口
+                      // rule: require('myRuleModule'),  // 拦截的规则
+                      webInterface:{
+                          enable: true,
+                          webPort: 8002  //网页端拦截的端口
+                      },
+                      throttle: 10000,    // 速率
+                      forceProxyHttps: false, // 是否强制拦截https
+                      wsIntercept: false,  // 是否拦截websocket
+                      silent: false,  // 是否console.log打印到控制台
+                      systemProxy: true // 自定义参数
+                  };
+                  if(option.systemProxy){  // 是否开启代理
+                      AnyProxy.utils.systemProxyMgr.enableGlobalProxy('127.0.0.1', option.port)
+                  }
+                  const proxyServer = new AnyProxy.ProxyServer(option);
+
+                  proxyServer.on('ready',() => { /* */ })  // 代理成功开启后，做什么操作
+                  proxyServer.on('error',() => { /* */ })  // 代理开启失败后，做什么操作
+
+
+                  // 插件：局部代理
+                  // 全局代理，所有应用都走的
+
+                  proxyServer.start() // 代理开启
+
+                  // proxyServer.close()
+
       
       2、对于流量中的JS 和 HTML代码，使用AST处理，注入HOOK逻辑
       
