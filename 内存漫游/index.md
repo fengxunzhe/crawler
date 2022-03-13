@@ -58,7 +58,7 @@
                   开启全局代理后，关掉需要在以下中关掉
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/5.png)
                   
-                  局部代理，使用谷歌
+                  局部代理，使用谷歌SwitchyOmega
       
       2、对于流量中的JS 和 HTML代码，使用AST处理，注入HOOK逻辑
 
