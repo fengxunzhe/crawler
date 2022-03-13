@@ -20,7 +20,7 @@
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/4.png)
 
 ## 三、原理
-      1、访问目标网站时，经过我们的自定义代理服务器anyproxy，截获流量
+      1、访问目标网站时，经过我们的自定义代理服务器anyproxy，截获流量(通过127.0.0.1:8002可打开anyproxy查看)
       
             1.1、自定义AnyProxy，实现拦截流量
                   const AnyProxy = require('anyproxy')
