@@ -58,7 +58,7 @@
                   开启全局代理后，关掉需要在以下中关掉
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/5.png)
                   
-                  局部代理，使用谷歌SwitchyOmega
+                  局部代理，使用谷歌SwitchyOmega【作用目前看是：让流量走局部代理】
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/%E5%86%85%E5%AD%98%E6%BC%AB%E6%B8%B8/img/7.png) 
             
             1.3、使用演示
