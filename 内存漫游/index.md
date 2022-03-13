@@ -70,6 +70,13 @@
       ===2、对于流量中的JS 和 HTML代码，使用AST处理，注入HOOK逻辑
       
             2.1、 规则过滤 rule: require('myRuleModule'),  // 拦截的规则
-            
+                  ①、拦截并修改正在发送的请求
+                        包括请求头(request header)、请求头(request body)，甚至请求的目标地址
+                  ②、拦截并修改服务端响应
+                        包括http状态码(status code)、响应头(response header)、响应内容(response content)
+                  ③、拦截修改https请求
+                        本质是中间人攻击、需要客户端提取信任CA证书         
 
       3、
+      
+
