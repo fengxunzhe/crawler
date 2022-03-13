@@ -26,6 +26,7 @@
 ## 3、单步进入write 函数，定位到cookie写入的位置，取消之前的断点，此处下断点，点击跳过函数,直到e = kg_mid 点击单步进入
 
  ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/2.png)
+此时发现t 是我们要的值 kg_mid = t，但是t是该函数传的参数，此时已生成，我们点击堆栈，看未生成的地方
 4、单步进入到生成kg_mid的函数，查看堆栈，定位到上一步生成的位置如下：
 -
  ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/3.png)
