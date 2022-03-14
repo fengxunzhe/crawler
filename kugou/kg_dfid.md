@@ -15,3 +15,9 @@
 
 #### 5、s = CryptoJS.enc.Base64.stringify(l); var l = CryptoJS.enc.Utf8.parse(t);  t = JSON.stringify(e); 所以需要找传入的e是什么
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/1-5.png)
+
+#### 6、在e处下断点，此处能见到传入的e是个对象(指纹数据),通过看到堆栈，定位
+![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/1-6.png)
+
+#### 7、C(function(e){})是个自执行函数
+![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/1-7.png)
