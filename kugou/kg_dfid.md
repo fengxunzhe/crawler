@@ -14,3 +14,4 @@
 ![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/1-4.png)
 
 #### 5、s = CryptoJS.enc.Base64.stringify(l); var l = CryptoJS.enc.Utf8.parse(t);  t = JSON.stringify(e); 所以需要找传入的e是什么
+![imag](https://github.com/fengxunzhe/crawler/blob/main/kugou/img/1-5.png)
