@@ -37,3 +37,27 @@
         top	返回最顶层的父窗口。
         
 ### 2、JS改写中 每一个function(){}; 结尾记得加分号; 不然会报未定义错误
+### 3、内部自执行函数执行流程
+
+      1、未定义特定执行的自函数
+
+            function test(){
+                console.log("this is test ----");
+
+                //自执行函数
+                !function test01(){
+                    console.log("this is tes01 ----");
+                }();
+
+                console.log("this is test ====");
+            }
+            test()
+            ====输出
+            this is test ----
+            this is tes01 ----
+            this is test ====
+
+            所以默认函数执行流程是自上而下的
+      
+      
+      
