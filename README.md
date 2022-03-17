@@ -39,7 +39,7 @@
 ### 2、JS改写中 每一个function(){}; 结尾记得加分号; 不然会报未定义错误
 ### 3、内部自执行函数执行流程
 
-      1、未定义特定执行的自函数
+      1、未定义特定执行的自执行函数
 
             function test(){
                 console.log("this is test ----");
@@ -58,6 +58,26 @@
             this is test ====
 
             所以默认函数执行流程是自上而下的
-      
-      
-      
+    
+      2、定义先后执行的自执行函数
+            function(e, t, n) {
+                var r;
+                !function(i) {
+                    function o(e, t) {} 
+                    
+                    function a(e, t, n, r, i, a) {}
+                    
+                    function v(e) {}
+                    
+                    function m(e, t, n) {
+                        return t ? n ? g(t, e) : h(g(t, e)) : n ? v(e) : h(v(e))
+                    }
+                    //  导出自函数的某个内部函数 m，那么在执行该子函数时，首先会执行m函数
+                    void 0 === (r = function() {
+                        return m
+                    }
+                    .call(t, n, t, e)) || (e.exports = r)
+                }()
+            }
+
+
